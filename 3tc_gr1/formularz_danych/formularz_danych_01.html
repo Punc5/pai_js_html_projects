@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz danych (część 1.)</title>
+</head>
+<body>
+    <div id="tekst">
+        <label for="im">Imię:</label>
+        <input type="text" id="im">
+        
+        <label for="nazw">Nazwisko:</label>
+        <input type="text" id="nazw">
+        
+        <input type="button" value="Pobierz" onclick="dane()">
+    </div>
+
+    <script type="text/javascript">
+        function dane() {
+            let imie = document.getElementById("im").value;
+            let nazwisko = document.getElementById("nazw").value;
+            let tekst = document.getElementById("tekst");
+            
+            tekst.innerText = imie + " " + nazwisko;
+        }
+    </script>
+</body>
+</html>

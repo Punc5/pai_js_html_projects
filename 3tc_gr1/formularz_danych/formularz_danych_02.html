@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz danych (część 2.)</title>
+</head>
+<body>
+    <label for="liczba1">Pierwsza liczba:</label>
+    <input type="text" id="liczba1">
+    
+    <label for="liczba2">Druga liczba:</label>
+    <input type="text" id="liczba2">
+    
+    <input type="button" value="Suma" onclick="obliczSume()">
+    
+    <br>
+    <p>Suma = <span id="wynik"></span></p>
+
+    <script type="text/javascript">
+        function obliczSume() {
+            let liczba1 = Number(document.getElementById("liczba1").value);
+            let liczba2 = Number(document.getElementById("liczba2").value);
+            let suma = liczba1 + liczba2;
+            
+            document.getElementById("wynik").innerText = suma;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz danych (część 3.)</title>
+</head>
+<body>
+    <label for="liczba1">Podaj 1. liczbę:</label>
+    <input type="text" id="liczba1">
+    
+    <br>
+
+    <label for="liczba2">Podaj 2. liczbę:</label>
+    <input type="text" id="liczba2">
+    
+    <br><br>
+
+    <input type="radio" name="operacja" value="dodawanie" id="dodawanie" checked>
+    <label for="dodawanie">Dodawanie</label>
+
+    <br>
+
+    <input type="radio" name="operacja" value="odejmowanie" id="odejmowanie">
+    <label for="odejmowanie">Odejmowanie</label>
+
+    <br><br>
+
+    <input type="button" value="Oblicz" onclick="oblicz()">
+
+    <br><br>
+
+    <p>Wynik: <span id="wynik"></span></p>
+
+    <script type="text/javascript">
+        function oblicz() {
+            let liczba1 = Number(document.getElementById("liczba1").value);
+            let liczba2 = Number(document.getElementById("liczba2").value);
+            let wynik = document.getElementById("wynik");
+
+            let operacja = document.querySelector('input[name="operacja"]:checked').value;
+            
+            if (operacja === "dodawanie") {
+                wynik.innerText = liczba1 + liczba2;
+            } else if (operacja === "odejmowanie") {
+                wynik.innerText = liczba1 - liczba2;
+            }
+        }
+    </script>
+</body>
+</html>
