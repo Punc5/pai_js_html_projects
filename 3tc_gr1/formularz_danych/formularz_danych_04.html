@@ -14,8 +14,28 @@
     <br><br>
     <label for="plec">Płeć:</label>
     <br>
-    <input type="radio" name="grupa_opcji" id="plec">mężczyzna
-    <input type="radio" name="grupa_opcji" id="plec">kobieta
-    <br><br>
+    <input type="radio" name="grupa_opcji_1" id="plec">kobieta
+    <input type="radio" name="grupa_opcji_1" id="plec">mężczyzna
+    <p>Hobby:
+        <br>
+        <input type="checkbox" name="grupa_opcji_2">Pływanie
+        <br>
+        <input type="checkbox" name="grupa_opcji_2">Fotografia
+        <br>
+        <input type="checkbox" name="grupa_opcji_2">Literatura
+        <br>
+        <input type="checkbox" name="grupa_opcji_2">Gotowanie
+    </p>
+    <input type="submit" value="Wyślij" name="Wyślij">
+    <script type="text/javascript">
+        let imie = Text(document.getElementById("imie").value);
+        let nazwisko = Text(document.getElementById("nazwisko").value);
+        let plec = Text(document.getElementById("kobieta").value);
+        let plec = Text(document.getElementById("mężczyzna").value);
+
+        if(plec.checked === true) {
+            
+        }
+    </script>
 </body>
 </html>
