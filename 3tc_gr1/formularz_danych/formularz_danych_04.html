@@ -1,40 +1,48 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formularz danych (część 4.)</title>
 </head>
 <body>
-    <label for="imie">Imię:</label>
-    <input type="text" name="imie" id="imie">
-    <br><br>
-    <label for="nazwisko">Nazwisko:</label>
-    <input type="text" name="nazwisko" id="nazwisko">
-    <br><br>
-    <label for="plec">Płeć:</label>
-    <br>
-    <input type="radio" name="grupa_opcji_1" id="plec">kobieta
-    <input type="radio" name="grupa_opcji_1" id="plec">mężczyzna
-    <p>Hobby:
-        <br>
-        <input type="checkbox" name="grupa_opcji_2">Pływanie
-        <br>
-        <input type="checkbox" name="grupa_opcji_2">Fotografia
-        <br>
-        <input type="checkbox" name="grupa_opcji_2">Literatura
-        <br>
-        <input type="checkbox" name="grupa_opcji_2">Gotowanie
-    </p>
-    <input type="submit" value="Wyślij" name="Wyślij">
+    <div id="tekst">
+        <label for="liczba1">Podaj 1. liczbę:</label>
+        <input type="text" id="liczba1">
+        <br><br>
+        <label for="liczba2">Podaj 2. liczbę:</label>
+        <input type="text" id="liczba2">
+        <br><br>
+        <input type="checkbox" id="dodawanie">Dodawanie
+        <input type="checkbox" id="odejmowanie">Odejmowanie
+        <br><br>
+        <input type="button" value="Oblicz" onclick="obliczDane()">
+        <br><br>
+        <div id="wynik"></div>
+    </div>
     <script type="text/javascript">
-        let imie = Text(document.getElementById("imie").value);
-        let nazwisko = Text(document.getElementById("nazwisko").value);
-        let plec = Text(document.getElementById("kobieta").value);
-        let plec = Text(document.getElementById("mężczyzna").value);
-
-        if(plec.checked === true) {
+        function obliczDane() {
+            let liczba1 = Number(document.getElementById("liczba1").value);
+            let liczba2 = Number(document.getElementById("liczba2").value);
+            let wynikDiv = document.getElementById("wynik");
+            let wynik = "";
             
+            let dodawanieChecked = document.getElementById("dodawanie").checked;
+            let odejmowanieChecked = document.getElementById("odejmowanie").checked;
+            
+            if (dodawanieChecked) {
+                wynik += "Suma: " + (liczba1 + liczba2) + "<br>";
+            }
+            
+            if (odejmowanieChecked) {
+                wynik += "Różnica: " + (liczba1 - liczba2) + "<br>";
+            }
+            
+            if (!dodawanieChecked && !odejmowanieChecked) {
+                wynik = "Wybierz operację!";
+            }
+            
+            wynikDiv.innerHTML = wynik;
         }
     </script>
 </body>
