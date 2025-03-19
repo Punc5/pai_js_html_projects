@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obiekty window</title>
+</head>
+<body>
+    <input type="button" value="Przejdź do ZST" onclick="window.location.href='http://www.zstjaslo.pl'">
+    <input type="button" value="Przejdź do Gmail" onclick="window.location.href='https://mail.google.com'">
+
+    <script type="text/javascript">
+        document.write("<strong>Metody i właściwości obiektu window:</strong><br><br>");
+
+        document.write("Szerokość okna: " + window.innerWidth + "px<br>");
+        document.write("Wysokość okna: " + window.innerHeight + "px<br>");
+        document.write("Aktualny URL: " + window.location.href + "<br>");
+        document.write("Domena: " + window.location.hostname + "<br>");
+        document.write("Ścieżka strony: " + window.location.pathname + "<br>");
+        document.write("Przeglądarka: " + window.navigator.userAgent + "<br>");
+        document.write("Język przeglądarki: " + window.navigator.language + "<br>");
+        document.write("Historia przeglądania (długość): " + window.history.length + "<br>");
+    </script>
+</body>
+</html>
