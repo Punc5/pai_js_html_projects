@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdarzenia (część 1.)</title>
+</head>
+<body>
+    <img src="obraz.jpg" id="obraz" onmouseenter="pokazTekst()" onmouseleave="ukryjTekst()">
+    <p id="tekst"></p>
+    <script type="text/javascript">
+        function funkcja() {
+            let txt = document.getElementById("tekst");
+            txt.innerText = "Najechałeś na obrazek";
+        }
+    </script>
+</body>
+</html>

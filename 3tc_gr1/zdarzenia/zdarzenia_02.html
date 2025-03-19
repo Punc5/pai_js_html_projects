@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdarzenia (część 2.)</title>
+</head>
+<body>
+    <img src="obraz.jpg" id="obraz" onmouseenter="najechanie()" onmouseleave="wyjechanie()">
+    <p id="tekst"></p>
+    <script type="text/javascript">
+        function najechanie() {
+            let txt = document.getElementById("tekst");
+            txt.innerText = "Najechałeś na obrazek";
+        }
+
+        function wyjechanie() {
+            let txt = document.getElementById("tekst");
+            txt.innerText = "Wyjechałeś z terenu z obrazka!";
+        }
+    </script>
+</body>
+</html>
