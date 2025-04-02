@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdarzenia (część 4.)</title>
+</head>
+<body>
+    <img src="tulipany.jpg" id="obraz" onmousedown="klikniecie()" onmouseup="puszczenie()">
+
+    <script type="text/javascript">
+        function klikniecie() {  // Poprawiona nazwa funkcji
+            let obraz = document.getElementById("obraz");
+            obraz.src = "obraz.jpg";
+        }
+
+        function puszczenie() {
+            let obraz = document.getElementById("obraz");
+            obraz.src = "tulipany.jpg";
+        }
+    </script>
+</body>
+</html>

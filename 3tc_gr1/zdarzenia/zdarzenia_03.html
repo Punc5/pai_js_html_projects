@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdarzenia (część 3.)</title>
+</head>
+<body>
+    <img src="obraz.jpg" id="obraz" onmouseenter="najechanie()" onmouseleave="wyjechanie()">
+    
+    <script type="text/javascript">
+        function najechanie() {
+            document.getElementById("obraz").src = "tulipany.jpg";
+        }
+
+        function wyjechanie() {
+            document.getElementById("obraz").src = "obraz.jpg";
+        }
+    </script>
+</body>
+</html>

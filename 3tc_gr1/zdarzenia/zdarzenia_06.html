@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdarzenia (część 6.)</title>
+</head>
+<body>
+    <img src="obraz.jpg" class="obraz" id="obraz">
+    <br>
+    <input type="button" value="Róże" onclick="roze()">
+    <input type="button" value="Tulipany" onclick="tulipany()">
+
+    <script type="text/javascript">
+        function roze() {
+            document.querySelector("#obraz").src = "obraz.jpg";
+        }
+
+        function tulipany() {
+            document.querySelector("#obraz").src = "tulipany.jpg";
+        }
+    </script>
+</body>
+</html>

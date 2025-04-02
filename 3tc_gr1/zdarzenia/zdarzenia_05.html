@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdarzenia (część 5.)</title>
+</head>
+<body>
+    <img src="tulipany.jpg" class="obraz" onmousedown="klikniecie()" onmouseup="puszczenie()">
+
+    <script type="text/javascript">
+        function klikniecie() {
+            let obraz = document.querySelector(".obraz");
+            obraz.src = "obraz.jpg";
+        }
+
+        function puszczenie() {
+            let obraz = document.querySelector(".obraz");
+            obraz.src = "tulipany.jpg";
+        }
+
+        // querySelector() - metoda obiektu document:
+        // document.querySelector()
+    </script>
+</body>
+</html>
