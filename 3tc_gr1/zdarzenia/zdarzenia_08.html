@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdarzenia (część 8.)</title>
+    <style>
+        img {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <img src="obraz.jpg" id="obraz1">
+    <img src="tulipany.jpg" id="obraz2">
+
+    <script>
+        let obr1 = document.querySelector("#obraz1");
+        let obr2 = document.querySelector("#obraz2");
+
+        obr1.size = 1;
+        obr2.size = 1;
+    
+        obr1.addEventListener("click", () => {
+            obr1.size = 2;
+            obr2.size = 1;
+    
+            obr1.style.width = "500px";
+            obr2.style.width = "200px";
+        });
+    
+        obr2.addEventListener("click", () => {
+            obr2.size = 2;
+            obr1.size = 1;
+    
+            obr2.style.width = "500px";
+            obr1.style.width = "200px";
+        });
+    </script>    
+</body>
+</html>

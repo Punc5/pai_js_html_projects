@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdarzenia (część 7.)</title>
+</head>
+<body>
+    <img src="obraz.jpg" id="obraz" value="obraz">
+    <input type="button" id="przycisk1" value="p1">
+    <input type="button" id="przycisk2" value="p2">
+
+    <script type="text/javascript">
+        let obr = document.querySelector("#obraz");
+
+        let p1 = document.querySelector("#przycisk1");
+        let p2 = document.querySelector("#przycisk2");
+
+        p1.addEventListener("click", ()=> { obr.src = "tulipany.jpg" });
+        p2.addEventListener("click", ()=> { obr.src = "obraz.jpg" });
+    </script>
+</body>
+</html>
