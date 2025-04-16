@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdarzenia (część 9.)</title>
+</head>
+<body>
+    Podaj znak: <input type="text" id="pole">
+
+    <script type="text/javascript">
+        // Napisz skrypt, który pobierze od użytkownika ciągu znaków.
+        // Wpisywanie kolejnych znaków do pola okna ekranu spowoduje zamianę poprzedniej wpisanej litery na wielką.
+
+        let p = document.querySelector("#pole");
+        p.addEventListener('keyup', ()=> { 
+            p.value = p.value.toLowerCase();
+        })
+    </script>
+</body>
+</html>
