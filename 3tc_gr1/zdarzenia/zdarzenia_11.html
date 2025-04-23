@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zdarzenia (część 11.)</title>
+</head>
+<body>
+    Podaj 1 liczbę: <input type="number" id="1_liczba" value="0">
+    <br><br>
+    Podaj 2 liczbę: <input type="number" id="2_liczba" value="0">
+    <br><br>
+    <input type="radio" name="dzialanie" value="dodawanie">dodawanie
+    <br><br>
+    <input type="radio" name="dzialanie" value="odejmowanie">odejmowanie
+    <br><br>
+    Wynik: <input type="text" id="wynik">
+
+    <script type="text/javascript"> 
+        function oblicz() {
+            let a = Number(document.getElementById("1_liczba").value);
+            let b = Number(document.getElementById("2_liczba").value);
+            let dzialanie = document.querySelector('input[name="dzialanie"]:checked')?.value;
+
+            let wynik;
+            if (dzialanie === "dodawanie") {
+                wynik = a + b;
+            } else if (dzialanie === "odejmowanie") {
+                wynik = a - b;
+            }
+
+            document.getElementById("wynik").value = wynik;
+        }
+
+        document.getElementById("1_liczba").addEventListener("input", oblicz);
+        document.getElementById("2_liczba").addEventListener("input", oblicz);
+
+        document.querySelectorAll('input[name="dzialanie"]').forEach(elem => {
+            elem.addEventListener("change", oblicz);
+        });
+    </script>
+</body>
+</html>

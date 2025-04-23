@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdarzenia (część 10.)</title>
+</head>
+<body>
+    Podaj tekst:
+    <br>
+    <textarea id="wczytaj" rows="6" cols="20"></textarea>
+    <br><br>
+    Wczytaj tekst:
+    <br>
+    <div id="podaj"></div>
+
+    <script type="text/javascript">
+        let wczytajTekst = document.querySelector("#wczytaj");
+        let podajDiv = document.querySelector("#podaj");
+
+        wczytajTekst.addEventListener('input', () => {
+            podajDiv.innerText = wczytajTekst.value;
+        });
+    </script>
+</body>
+</html>

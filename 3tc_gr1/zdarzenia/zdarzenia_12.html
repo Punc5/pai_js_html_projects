@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdarzenia (część 12.)</title>
+</head>
+<body>
+    Podaj 1 liczbę: <input type="number" id="a" value="0" oninput="oblicz()">
+    <br><br>
+    Podaj 2 liczbę: <input type="number" id="b" value="0" oninput="oblicz()">
+    <br><br>
+    <input type="checkbox" id="iloczyn" onchange="oblicz()">iloczyn
+    <br><br>
+    <input type="checkbox" id="iloraz" onchange="oblicz()">iloraz
+    <br><br>
+    <div id="wynik"></div>
+
+    <script type="text/javascript">
+        function oblicz() {
+            let a = parseFloat(document.getElementById("a").value);
+            let b = parseFloat(document.getElementById("b").value);
+            let wynikDiv = document.getElementById("wynik");
+            let tekst = "";
+
+            if (document.getElementById("iloczyn").checked) {
+                tekst += "Iloczyn: " + (a * b) + "<br>";
+            }
+
+            if (document.getElementById("iloraz").checked) {
+                if (b !== 0) {
+                    tekst += "Iloraz: " + (a / b) + "<br>";
+                } else {
+                    tekst += "Iloraz: nie można dzielić przez 0<br>";
+                }
+            }
+
+            wynikDiv.innerHTML = tekst;
+        }
+    </script>    
+</body>
+</html>
