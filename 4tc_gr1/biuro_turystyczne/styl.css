@@ -1,0 +1,9 @@
+#stopka, h1 {
+    text-align: center;
+}
+
+#miniatury img {
+    width: 75px;
+    height: auto;
+    place-items: center;
+}
