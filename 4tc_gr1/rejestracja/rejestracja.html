@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header id="baner">
+        <h1>Formularz rejestracyjny konferencji <i>Nasze Kwiaty</i></h1>
+    </header>
+
+    <div id="blok_glowny">
+        <div id="blok_1">
+            <h2>Dane osobowe</h2>
+            <input type="text" placeholder="Wpisz imię...">
+            <br><br>
+            <input type="text" placeholder="Wpisz nazwisko...">
+            <br><br>
+            <button type="button" id="przycisk_bloku_1">Następna karta</button>
+        </div>
+
+        <div id="blok_2" style="display: none;">
+            <h2>Dane kontaktowe</h2>
+            <input type="text" placeholder="Twój e-mail...">
+            <br><br>
+            <input type="text" placeholder="Twój numer telefonu...">
+            <br><br>
+            <button type="button" id="przycisk_bloku_2">Następna karta</button>
+        </div>
+
+        <div id="blok_3" style="display: none;">
+            <h2>Hasło do logowania</h2>
+            <input type="text" placeholder="Podaj hasło" id="haslo_1">
+            <br><br>
+            <input type="text" placeholder="Powtórz hasło" id="haslo_2">
+            <br><br>
+            <button type="button" id="przycisk_bloku_3">Zatwierdź</button> 
+        </div>
+    </div>
+
+    <footer id="stopka_1">
+        <video controls>
+            <source src="motyl.mp4" type="video/mp4">
+            <p>Przeglądarka nie obsługuje tego formatu</p>
+        </video>
+    </footer>
+
+    <footer id="stopka_2">
+        <h3>Plan konferencji</h3>
+            <table>
+                <tr>
+                    <td>9:00 - 12:00</td>
+                    <td>Pielęgnacja roślin</td>
+                </tr>
+                <tr>
+                    <td>13:00 - 15:00</td>
+                    <td>Targi kwiatowe</td>
+                </tr>
+            </table>
+    </footer>
+
+    <footer id="stopka_3">
+        <p>
+            <a href="https://kwiaty.pl/">Internetowa kwiaciarnia</a>
+        </p>
+    </footer>
+
+    <footer id="stopka_4">
+        <p>Formularz wykonał: 000000000000</p>
+    </footer>
+
+    <script type="text/javascript">
+        let przycisk_1_bloku = document.getElementById("przycisk_bloku_1");
+        let przycisk_2_bloku = document.getElementById("przycisk_bloku_2");
+        let przycisk_3_bloku = document.getElementById("przycisk_bloku_3");
+
+        przycisk_1_bloku.addEventListener("click", () => {
+            document.getElementById("blok_1").style.display = "none"; 
+            document.getElementById("blok_2").style.display = "block";
+        });
+
+        przycisk_2_bloku.addEventListener("click", () => {
+            document.getElementById("blok_2").style.display = "none"; 
+            document.getElementById("blok_3").style.display = "block";
+        });
+
+
+        const haslo1 = document.getElementById("haslo_1").value;
+        const haslo2 = document.getElementById("haslo_2").value;
+        const imie = document.getElementById("imie").value;
+        const nazwisko = document.getElementById("nazwisko").value;
+        const przycisk3Bloku = document.getElementById("przycisk_3_bloku");
+
+        przycisk3Bloku.addEventListener("click", () => {
+            if (haslo1 === haslo2) {
+                console.log(`Witaj ${imie} ${nazwisko}`);
+            } else {
+                alert("Podane hasła różnią się");
+            }
+        });
+    </script>
+</body>
+</html>
