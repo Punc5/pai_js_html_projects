@@ -28,29 +28,29 @@
             <a href="index.html">Powrót do strony głównej</a>
         </h4>
     </div>
-    
+
     <main>
         <div id="prawy_1">
-            <h1>Wybierz zdjęcie</h1>
-            <img src="pies1.jpg" alt="Pies 1" id="pies_1" onclick="zmienObraz(this.src)">
-            <img src="pies2.jpg" alt="Pies 2" id="pies_2" onclick="zmienObraz(this.src)">
-            <img src="pies3.jpg" alt="Pies 3" id="pies_3" onclick="zmienObraz(this.src)">     
+            <h2>Wybierz zdjęcie</h2>
+            <img src="pies1.jpg" alt="Pies 1 — opis" id="pies_1" onclick="zmienObraz(this.src)">
+            <img src="pies2.jpg" alt="Pies 2 — opis" id="pies_2" onclick="zmienObraz(this.src)">
+            <img src="pies3.jpg" alt="Pies 3 — opis" id="pies_3" onclick="zmienObraz(this.src)">     
         </div>
 
         <div id="prawy_2">
-            <img src="pies1.jpg" alt="Duży pies" id="pies-duży">
+            <img src="pies1.jpg" alt="Duży obraz psa" id="pies-duży">
         </div>
     </main>
 
     <footer id="stopka">
-        <a>Galerię zdjęć opracował: <i>000000000000</i></a>
+        <p>Galerię zdjęć opracował: <i>000000000000</i></p>
     </footer>
 
     <script type="text/javascript">
-        let pies = document.querySelector("#pies-duży");
+        let pies = document.getElementById("pies-duży");
 
         function zmienObraz(zdj){
-            pies.src = zdj;
+            if (pies) pies.src = zdj;
         }
     </script>
 </body>
