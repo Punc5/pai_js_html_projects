@@ -14,31 +14,25 @@
     <div id="lewy">
         <h2>Kategorie</h2>
         <ul>
-            <li>
-                <a href="psy.html">Psy</a>
-            </li>
-            <li>
-                <a href="koty.html">Koty</a>   
-            </li>
+            <li><a href="psy.html">Psy</a></li>
+            <li><a href="koty.html">Koty</a></li>
             <li>Gryzonie</li>
             <li>Jaszczurki</li>
             <li>Inne zdjęcia</li>
         </ul>
-        <h4>
-            <a href="index.html">Powrót do strony głównej</a>
-        </h4>
+        <h4><a href="index.html">Powrót do strony głównej</a></h4>
     </div>
 
     <main>
         <div id="prawy_1">
             <h2>Wybierz zdjęcie</h2>
-            <img src="pies1.jpg" alt="Pies 1 — opis" id="pies_1" onclick="zmienObraz(this.src)">
-            <img src="pies2.jpg" alt="Pies 2 — opis" id="pies_2" onclick="zmienObraz(this.src)">
-            <img src="pies3.jpg" alt="Pies 3 — opis" id="pies_3" onclick="zmienObraz(this.src)">     
+            <img src="pies1.jpg" alt="pies1" id="pies_1" onclick="zmienObraz(this.src)">
+            <img src="pies2.jpg" alt="pies2" id="pies_2" onclick="zmienObraz(this.src)">
+            <img src="pies3.jpg" alt="pies3" id="pies_3" onclick="zmienObraz(this.src)">     
         </div>
 
         <div id="prawy_2">
-            <img src="pies1.jpg" alt="Duży obraz psa" id="pies-duży">
+            <img src="pies1.jpg" alt="duzy-pies" id="pies-duzy">
         </div>
     </main>
 
@@ -47,10 +41,10 @@
     </footer>
 
     <script type="text/javascript">
-        let pies = document.getElementById("pies-duży");
+        let pies = document.getElementById("pies-duzy");
 
-        function zmienObraz(zdj){
-            if (pies) pies.src = zdj;
+        function zmienObraz(zdj) {
+            pies.src = zdj;
         }
     </script>
 </body>

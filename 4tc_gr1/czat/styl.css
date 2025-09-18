@@ -1,0 +1,81 @@
+body {
+    font-family: Garamond;
+}
+
+header {
+    background-color: Tomato;
+    color: white;
+    text-align: center;
+    width: 80%;
+    height: 80px;
+}
+
+.main-container {
+    display: flex;
+}
+
+.sidebar {
+    background-color: Coral;
+    width: 20%;
+    height: 680px;
+}
+
+.main-content {
+    width: 80%;
+    height: 600px;
+}
+
+footer {
+    background-color: Tomato;
+    color: white;
+    text-align: center;
+}
+
+img {
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.chat-block {
+    border: 1px solid Tomato;
+    margin: 15px;
+    height: 470px;
+    overflow-y: scroll;
+}
+
+.message-jolanta, .message-krzysztof {
+    border-radius: 5px;
+    width: 90%;
+    height: 70px;
+    margin: 2%;
+    padding: 3px;
+}
+
+.message-jolanta {
+    background-color: #EEE;
+    float: left;
+}
+
+.message-krzysztof {
+    background-color: #CCC;
+    text-align: right;
+    float: right;
+}
+
+button {
+    background-color: Tomato;
+    border: 1px solid DarkRed;
+    padding: 5px;
+    font-weight: bold;
+}
+
+#message-input {
+    width: 500px;
+}
+
+.chat-block::after {
+    content: "";
+    display: table;
+    clear: both;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h2>Chat</h2>
+    </header>
+    <div class="main-container">
+        <aside class="sidebar">
+            <h3>Chaty</h3>
+            <ul>
+                <li>Ogólny</li>
+                <li>Tematyczne
+                    <ol>
+                        <li>Turystyczny</li>
+                        <li>Żeglarski</li>
+                        <li>Filatelistyczny</li>
+                        <li>Hodowla zwierzątek domowych</li>
+                    </ol>
+                </li>
+            </ul>
+            <h3>Uczestnicy</h3>
+            <p>Jolanta Nowak</p>
+            <img src="Jolka.jpg" alt="Jolanta Nowak">
+            <p>Krzysztof Łukasiński</p>
+            <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
+        </aside>
+        <main class="main-content">
+            <div class="chat-block">
+                <div class="message-jolanta">
+                    <img src="Jolka.jpg" alt="Jolanta Nowak">
+                    <p>Cześć idziesz jutro do kina?</p>
+                </div>
+                <div class="message-krzysztof">
+                    <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
+                    <p>Tak! A ty?</p>
+                </div>
+            </div>
+            <label for="message-input">Wpisz wiadomość:</label>
+            <input type="text" id="message-input">
+            <button onclick="wyslijWiadomosc()">Wyślij</button>
+            <button onclick="generujLosowaOdpowiedz()">Generuj losową odpowiedź</button>
+        </main>
+    </div>
+    <footer>
+        <h5>Chat wykonał: 00000000000000</h5>
+    </footer>
+    <script type="text/javascript">
+        let odpowiedzi = [
+            "Świetnie!",
+            "Kto gra główną rolę?",
+            "Lubisz filmy tego reżysera?",
+            "Będę 10 minut wcześniej",
+            "Może kupimy sobie popcorn?",
+            "Ja wolę Colę",
+            "Zaproszę jeszcze Grześka",
+            "Tydzień temu też byłem w kinie na Diunie",
+            "Ja funduję bilety"
+        ];
+
+        function wyslijWiadomosc() {
+            let poleEdycyjne = document.getElementById('message-input');
+            let tekstWiadomosci = poleEdycyjne.value.trim();
+            
+            if (tekstWiadomosci !== "") {
+                let blokCzatu = document.querySelector('.chat-block');
+                let wiadomoscJolanta = '<div class="message-jolanta"><img src="Jolka.jpg" alt="Jolanta Nowak"><p>' + tekstWiadomosci + '</p></div>';
+                blokCzatu.innerHTML += wiadomoscJolanta;
+                poleEdycyjne.value = '';
+                blokCzatu.scrollTop = blokCzatu.scrollHeight;
+            }
+        }
+
+        function generujLosowaOdpowiedz() {
+            let losowyIndeks = Math.floor(Math.random() * odpowiedzi.length);
+            let losowaOdpowiedz = odpowiedzi[losowyIndeks];
+            
+            let blokCzatu = document.querySelector('.chat-block');
+            let wiadomoscKrzysztof = '<div class="message-krzysztof"><img src="Krzysiek.jpg" alt="Krzysztof Łukasiński"><p>' + losowaOdpowiedz + '</p></div>';
+            blokCzatu.innerHTML += wiadomoscKrzysztof;
+            blokCzatu.scrollTop = blokCzatu.scrollHeight;
+        }
+    </script>
+</body>
+</html>

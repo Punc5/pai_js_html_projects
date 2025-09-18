@@ -1,0 +1,64 @@
+body {
+    font-family: 'Bookman Old Style', serif;
+    margin: 0;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.baner {
+    background-color: DarkCyan;
+    color: white;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#stopka {
+    background-color: DarkCyan;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.karta {
+    background-color: Azure;
+    width: 30%;
+    margin: 1%;
+    box-shadow: 4px 4px 8px DimGray;
+    display: inline-block;
+}
+
+.karta img {
+    width: 100%;
+}
+
+h2, h3, p {
+    margin: 15px;
+}
+
+a {
+    color: white;
+}
+
+h5 {
+    background-color: Teal;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h5:hover {
+    background-color: LightSeaGreen;
+}
+
+#blok_cytatu {
+    text-align: center;
+    padding: 30px 0;
+    font-style: italic;
+}

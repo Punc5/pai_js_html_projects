@@ -11,19 +11,23 @@
         <h1>Zwiedzamy Polskę</h1>
     </header>
 
-    <div id="lewy">
+    <section id="baner">
+        <h1>Zwiedzamy Polskę</h1>
+    </section>
+
+    <section id="lewy">
         <button id="poprzedni" type="button" onclick="zmienObraz(-1)">&lt;</button> 
-    </div>
+    </section>
 
-    <div id="srodkowy">
+    <section id="srodkowy">
         <img id="obecny_obraz" src="1.jpg" alt="Aktywne zdjęcie">
-    </div>
+    </section>
 
-    <div id="prawy">
+    <section id="prawy">
         <button id="nastepny" type="button" onclick="zmienObraz(1)">&gt;</button>
-    </div>
+    </section>
 
-    <div id="miniatury">
+    <section id="miniatury">
         <img src="1.jpg" alt="Gdańsk">
         <img src="2.jpg" alt="Kraków">
         <img src="3.jpg" alt="Niedzica">
@@ -31,12 +35,12 @@
         <img src="5.jpg" alt="Szklarska Poręba">
         <img src="6.jpg" alt="Tatry">
         <img src="7.jpg" alt="Wrocław">
-    </div>
+    </section>
 
     <footer id="stopka">
-        <p><b>Autorem galerii jest:</b></p> 
+        <h3>Autorem galerii jest:</h3> 
         <p>00000000000</p>
-        <a href="http://pixabay.com">Więcej zdjęć</a>
+        <a href="http://pixabay.com" target="_blank">Więcej zdjęć</a>
     </footer>
 
     <script type="text/javascript">
@@ -53,14 +57,6 @@
             }
             document.getElementById("obecny_obraz").src = obrazy[indeks];
         }
-
-        document.getElementById("poprzedni").addEventListener("click", function() {
-            zmienObraz(-1);
-        });
-
-        document.getElementById("nastepny").addEventListener("click", function() {
-            zmienObraz(1);
-        });
     </script>
 </body>
 </html>

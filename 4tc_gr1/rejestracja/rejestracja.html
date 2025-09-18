@@ -14,9 +14,9 @@
     <div id="blok_glowny">
         <div id="blok_1">
             <h2>Dane osobowe</h2>
-            <input type="text" placeholder="Wpisz imię...">
+            <input type="text" placeholder="Wpisz imię..." id="imie" required>
             <br><br>
-            <input type="text" placeholder="Wpisz nazwisko...">
+            <input type="text" placeholder="Wpisz nazwisko..." id="nazwisko" required>
             <br><br>
             <button type="button" id="przycisk_bloku_1">Następna karta</button>
         </div>
@@ -32,9 +32,9 @@
 
         <div id="blok_3" style="display: none;">
             <h2>Hasło do logowania</h2>
-            <input type="text" placeholder="Podaj hasło" id="haslo_1">
+            <input type="password" placeholder="Podaj hasło" id="haslo_1" required>
             <br><br>
-            <input type="text" placeholder="Powtórz hasło" id="haslo_2">
+            <input type="password" placeholder="Powtórz hasło" id="haslo_2" required>
             <br><br>
             <button type="button" id="przycisk_bloku_3">Zatwierdź</button> 
         </div>
@@ -49,16 +49,16 @@
 
     <footer id="stopka_2">
         <h3>Plan konferencji</h3>
-            <table>
-                <tr>
-                    <td>9:00 - 12:00</td>
-                    <td>Pielęgnacja roślin</td>
-                </tr>
-                <tr>
-                    <td>13:00 - 15:00</td>
-                    <td>Targi kwiatowe</td>
-                </tr>
-            </table>
+        <table>
+            <tr>
+                <td>9:00 - 12:00</td>
+                <td>Pielęgnacja roślin</td>
+            </tr>
+            <tr>
+                <td>13:00 - 15:00</td>
+                <td>Targi kwiatowe</td>
+            </tr>
+        </table>
     </footer>
 
     <footer id="stopka_3">
@@ -86,14 +86,11 @@
             document.getElementById("blok_3").style.display = "block";
         });
 
-
-        const haslo1 = document.getElementById("haslo_1").value;
-        const haslo2 = document.getElementById("haslo_2").value;
-        const imie = document.getElementById("imie").value;
-        const nazwisko = document.getElementById("nazwisko").value;
-        const przycisk3Bloku = document.getElementById("przycisk_3_bloku");
-
-        przycisk3Bloku.addEventListener("click", () => {
+        przycisk_3_bloku.addEventListener("click", () => {
+            let haslo1 = document.getElementById("haslo_1").value;
+            let haslo2 = document.getElementById("haslo_2").value;
+            let imie = document.getElementById("imie").value;
+            let nazwisko = document.getElementById("nazwisko").value;
             if (haslo1 === haslo2) {
                 console.log(`Witaj ${imie} ${nazwisko}`);
             } else {

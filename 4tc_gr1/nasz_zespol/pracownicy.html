@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasz zespół</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <div class="baner">
+            <img src="logo.png" alt="logo firmy" class="logo">
+            <h1>Nasz zespół</h1>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="karty">
+            <article class="karta">
+                <img src="osoba1.jpg" alt="Dyrektor" />
+                <h2>Krzysztof Dobromilski</h2>
+                <h3>Dyrektor</h3>
+                <p>Firma logistyczna była jego marzeniem. Zrealizował je 10 lat temu. Nasza firma prosperuje dzięki Krzysztofowi.</p>
+                <p>Numer telefonu: 111222333</p>
+                <h5><a href="mailto:Krzysztof.Dobromilski@firma.pl">Kontakt</a></h5>
+            </article>
+            <article class="karta">
+                <img src="osoba2.jpg" alt="Kierownik logistyków" />
+                <h2>Joanna Trojanowska</h2>
+                <h3>Kierownik logistyków</h3>
+                <p>Od początku firmy z nami. Wie jak zorganizować pracę swoich logistyków aby wszystko było na czas.</p>
+                <p>Numer telefonu: 222333444</p>
+                <h5><a href="mailto:Joanna.Trojanowska@firma.pl">Kontakt</a></h5>
+            </article>
+            <article class="karta">
+                <img src="osoba3.jpg" alt="Kadry" />
+                <h2>Ewa Nowak</h2>
+                <h3>Księgowość i kadry</h3>
+                <p>Od lat finanse powierzamy niezawodnej Ewie. Twardą ręką trzyma kasę i dba o wszystkich pracowników.</p>
+                <p>Numer telefonu: 333444555</p>
+                <h5><a href="mailto:Ewa.Nowak@firma.pl">Kontakt</a></h5>
+            </article>
+        </section>
+
+        <section id="blok_cytatu">
+            <blockquote id="cytat_1" style="display: block;">
+                <p>"Każdego dnia stawiam sobie nieosiągalne wyzwania i próbuję je wykonać"</p>
+                <p>- Krzysztof</p>
+            </blockquote>
+            <blockquote id="cytat_2" style="display: none;">
+                <p>"Nie bój się porażek, im więcej ich rozwiążesz, tym szybciej osiągniesz cel"</p>
+                <p>- Joanna</p>
+            </blockquote>
+            <blockquote id="cytat_3" style="display: none;">
+                <p>"Niezadowolony pracownik jest dla mnie źródłem nauki"</p>
+                <p>- Ewa</p>
+            </blockquote>
+        </section>
+    </main>
+
+    <footer id="stopka">
+        Stronę wykonał: 00000000000
+    </footer>
+
+    <script type="text/javascript">
+        let cytat_1 = document.querySelector("#cytat_1");
+        let cytat_2 = document.querySelector("#cytat_2");
+        let cytat_3 = document.querySelector("#cytat_3");
+
+        cytat_1.addEventListener("click", () => {
+            cytat_1.style.display = "none";
+            cytat_2.style.display = "block";
+        });
+
+        cytat_2.addEventListener("click", () => {
+            cytat_2.style.display = "none";
+            cytat_3.style.display = "block";
+        });
+
+        cytat_3.addEventListener("click", () => {
+            cytat_3.style.display = "none";
+            cytat_1.style.display = "block";
+        });
+    </script>
+</body>
+</html>

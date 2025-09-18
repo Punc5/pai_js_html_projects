@@ -24,6 +24,8 @@ footer {
     color: white;
     width: 25%;
     height: 240px;
+    display: inline-block;
+    vertical-align: top;
 }
 
 #blok_1, #blok_2, #blok_3 {
@@ -63,6 +65,7 @@ button {
     margin-left: 60%;
     padding: 20px;
     border: none;
+    width: 100%;
 }
 
 video {
