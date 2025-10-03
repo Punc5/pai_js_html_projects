@@ -28,8 +28,8 @@
         $zmienna_3 = true; // true-false
         $zmienna_4 = "tekst"; // tekst
 
-        // Math.round(x) - zaokraglenie x
-        // Math.random(x, y) - losowa cyfra ze zbioru x i y
+        // round(x) - zaokraglenie x
+        // rand(x, y) - losowa cyfra ze zbioru x i y
         // Napisz skrypt, w którym dla wylosowanej wartości z przedziału od 1 do 10 wyznaczy rozwiązanie poniższych wyrażeń:
         $x = rand(1,10);
 
