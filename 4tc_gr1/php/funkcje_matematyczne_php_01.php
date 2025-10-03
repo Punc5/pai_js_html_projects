@@ -24,8 +24,8 @@
         /* Drugi sposób na komentarz */
 
         $zmienna_1 = 5.5; // liczba zmienno-przecinkowa
-        $zmienna_2 = -8; // liczba
-        $zmienna_3 = true; // true-false
+        $zmienna_2 = -8; // liczba całkowita
+        $zmienna_3 = true; // logika (true-false)
         $zmienna_4 = "tekst"; // tekst
 
         // round(x) - zaokraglenie x
