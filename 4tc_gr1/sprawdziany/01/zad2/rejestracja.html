@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <baner>
+        <h1>Formularz rejestracyjny konferencji <i>Nasze Kwiaty</i></h1>
+    </baner>
+
+    <div id="blok_glowny">
+        <div id="blok_1">
+            <h2>Dane osobowe</h2>
+            <input type="text" placeholder="Wpisz imię..." required id="imie">
+            <br><br>
+            <input type="text" placeholder="Wpisz nazwisko..." required id="nazwisko">
+            <br><br>
+            <button type="button" onclick="przycisk_1()" id="przycisk_1">Następna karta</button>
+        </div>
+
+        <div id="blok_2">
+            <h2>Dane osobowe</h2>
+            <input type="text" placeholder="Twój e-mail...">
+            <br><br>
+            <input type="text" placeholder="Twój numer telefonu...">
+            <br><br>
+            <button type="button" onclick="przycisk_2()" id="przycisk_2">Następna karta</button>
+        </div>
+
+        <div id="blok_3">
+            <h2>Hasło do logowania</h2>
+            <input type="password" placeholder="Podaj hasło..."  id="haslo_1">
+            <br><br>
+            <input type="password" placeholder="Powtórz hasło..." id="haslo_2">
+            <br><br>
+            <button type="button" onclick="przycisk_3()" id="przycisk_3">Zatwierdź</button>
+        </div>
+    </div>
+
+    <footer id="stopka">
+        <video src="motyl.mp4" controls alt="Przeglądarka nie obsługuje formatu"></video>
+    </footer>
+
+    <footer id="stopka">
+        <h3>Plan konferencji</h3>
+        <table>
+            <tr>
+                <td>9:00 - 12:00</td>
+                <td>13:00 - 15:00</td>
+            </tr>
+            <tr>
+                <td>Pielęgnacja roślin</td>
+                <td>Targi kwiatowe</td>
+            </tr>
+        </table>
+    </footer>
+
+    <footer id="stopka">
+        <p>
+            <a href="https://kwiaty.pl">Internetowa kwiaciarnia</a>
+        </p>
+    </footer>
+
+    <footer id="stopka">
+        <p>Formularz wykonał: 0000000000000</p>
+    </footer>
+
+    <script type=text/javascript>
+        let blok1 = document.querySelector("#blok_1");
+        let blok2 = document.querySelector("#blok_2");
+        let blok3 = document.querySelector("#blok_3");
+
+        let przycisk1 = document.querySelector("#przycisk_1");
+        let przycisk2 = document.querySelector("#przycisk_2");
+        let przycisk3 = document.querySelector("#przycisk_3");
+
+        let haslo1 = document.querySelector("#haslo1");
+        let haslo2 = document.querySelector("#haslo2");
+
+        if (haslo1 === haslo2) {
+            document.write("Witaj ${imie} ${nazwisko}");
+        } else {
+            alert("Podane hasła różnią się");
+        }
+
+        blok1.style.display = block;
+        blok2.style.display = none;
+        blok3.style.display = none;
+
+        blok1.style.display = none;
+        blok2.style.display = block;
+        blok3.style.display = none;
+
+        blok1.style.display = none;
+        blok2.style.display = none;
+        blok3.style.display = block;
+
+    </script>
+</body>
+</html>
